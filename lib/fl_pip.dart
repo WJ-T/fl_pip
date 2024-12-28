@@ -149,6 +149,12 @@ class FlPiP {
   /// ios supports background switching only
   Future<void> toggle(AppState state) =>
       _channel.invokeMethod('toggle', state == AppState.foreground);
+
+  /// set enableWhenBackground
+  /// 设置后台是否启用画中画
+  /// Set whether picture-in-picture is enabled in the background
+  Future<void> setEnableWhenBackground(bool enable) =>
+      _channel.invokeMethod('setEnableWhenBackground', enable);
 }
 
 enum AppState {

@@ -81,6 +81,9 @@ class PiPHelper: NSObject, AVPictureInPictureControllerDelegate {
             result(nil)
         case "available":
             result(isAvailable())
+        case "setEnableWhenBackground":
+            enabledWhenBackground = call.arguments as! Bool
+            result(nil)
         default:
             result(nil)
         }

@@ -151,6 +151,14 @@ class PiPHelper private constructor() {
                     result.success(true)
                 }
 
+                "setEnableWhenBackground" -> {
+                    enabledWhenBackground = call.arguments as Boolean
+                    // activity!!.setPictureInPictureParams(
+                    //     PictureInPictureParams.Builder().setAutoEnterEnabled(enabledWhenBackground).build(),
+                    // )
+                    result.success(null)
+                }
+
                 else -> result.notImplemented()
             }
         } else {
